@@ -30,11 +30,11 @@ class Cat:
         if self.live == 0:
             messagebox.showinfo("Конец игры", f"Вы разочаровали {self.name}а, он решил больше не возвращаться к вам!")
             self.MainWindow.destroy()
+        if self.age > 12:
+            messagebox.showinfo("Конец игры", f"{self.name} погиб от старости. Он благодарен вам за долгую жизнь и будет присматривать за вами с радуги.")
+            self.MainWindow.destroy()
 
     def ends_of_life(self):
-        if self.age > 12:
-            self.text.insert(tkinter.END, f"{self.name} погиб от старости.\n")
-            return True
         if self.hunger > 100:
             self.text.insert(tkinter.END, "Гибель в стиле Диониса.\n")
             return True
