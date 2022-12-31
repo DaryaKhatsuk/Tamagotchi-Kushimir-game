@@ -51,10 +51,10 @@ class Cat:
 
     def info(self):
         self.text.insert(tkinter.END, f"""\nВозраст: {self.age} года
-    Сытость: {self.hunger}%
-    Водный баланс: {self.thirst}%
-    Бодрость: {self.cheerfulness}%
-    Счастье: {self.joy}%\n""")
+Сытость: {self.hunger}%
+Водный баланс: {self.thirst}%
+Бодрость: {self.cheerfulness}%
+Счастье: {self.joy}%\n""")
 
     def cheer(self):
         if self.cheerfulness <= 20:
