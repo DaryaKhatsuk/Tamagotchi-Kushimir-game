@@ -2,7 +2,7 @@ import json
 import random
 import tkinter
 from tkinter import messagebox, RIGHT, Y, BOTH
-
+from sys import exit
 
 class Cat:
     def __init__(self, name):
@@ -51,10 +51,10 @@ class Cat:
 
     def info(self):
         self.text.insert(tkinter.END, f"""\nВозраст: {self.age} года
-    Сытость: {self.hunger}%
-    Водный баланс: {self.thirst}%
-    Бодрость: {self.cheerfulness}%
-    Счастье: {self.joy}%\n""")
+Сытость: {self.hunger}%
+Водный баланс: {self.thirst}%
+Бодрость: {self.cheerfulness}%
+Счастье: {self.joy}%\n""")
 
     def cheer(self):
         if self.cheerfulness <= 20:
@@ -214,3 +214,4 @@ class Interact(Cat):
 
 inter = Interact("Кусимир")
 inter.tk_init()
+exit()
